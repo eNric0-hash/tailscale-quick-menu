@@ -37,6 +37,8 @@ class TailMenu:
         menu = Gtk.Menu()
         state = "Connecté" if self.status.connected else "Déconnecté"
         menu.append(self.item(f"● {state}", sensitive=False))
+        account_label = f"Compte : {self.status.account}" if self.status.account else "Compte indisponible"
+        menu.append(self.item(account_label, sensitive=False))
         ip_label = f"Adresse : {self.status.ip}" if self.status.ip else "Adresse indisponible"
         menu.append(self.item(ip_label, self.copy_ip, bool(self.status.ip)))
         menu.append(Gtk.SeparatorMenuItem())
@@ -82,4 +84,3 @@ if __name__ == "__main__":
     from gi.repository import Gdk
     TailMenu()
     Gtk.main()
-
