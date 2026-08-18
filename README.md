@@ -18,7 +18,7 @@ Tailscale doit déjà être installé.
 
 ```bash
 sudo apt update
-sudo apt install python3-gi gir1.2-gtk-3.0 gir1.2-ayatanaappindicator3-0.1
+sudo apt install git python3-gi gir1.2-gtk-3.0 gir1.2-ayatanaappindicator3-0.1
 git clone https://github.com/eNric0-hash/tailscale-quick-menu.git
 cd tailscale-quick-menu
 ./install.sh
@@ -42,4 +42,3 @@ python3 -m tailmenu
 ```bash
 ./uninstall.sh
 ```
-
