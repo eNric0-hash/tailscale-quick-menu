@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=TailMenu
+Comment=Menu rapide Tailscale
+Exec=python3 @APP_DIR@/tailmenu/__main__.py
+Icon=network-vpn
+Terminal=false
+Categories=Network;Utility;
+StartupNotify=false
+
