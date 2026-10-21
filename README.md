@@ -12,6 +12,7 @@ Un petit menu Tailscale en français pour la barre système d'Ubuntu/GNOME.
 - accès direct à la console d'administration Tailscale ;
 - rafraîchissement automatique toutes les 3 secondes, même pendant une connexion ;
 - états d’authentification et erreurs visibles, sans bloquer le menu.
+- une seule instance par utilisateur Ubuntu, même en lançant plusieurs fois l’application.
 
 ## Installation sur Ubuntu
 
@@ -59,6 +60,13 @@ Relance **TailMenu** depuis les applications. Si l’ancienne version est figée
 termine uniquement son processus via le Moniteur système, ou ferme puis rouvre
 ta session Ubuntu. Mettre à jour les fichiers ne remplace pas le processus déjà
 en cours d’exécution.
+
+Si plusieurs anciennes instances sont déjà présentes, quitte **tous** les
+exemplaires via **Quitter TailMenu** avant de relancer la version mise à jour.
+Cela ferme uniquement le menu, pas la connexion Tailscale. Le garde-fou s’applique
+aux nouveaux lancements : applications, démarrage automatique et terminal. Un
+deuxième lancement laisse le premier actif ; après fermeture ou crash, TailMenu
+peut être relancé sans supprimer de fichier de verrouillage.
 
 ## Développement
 
